@@ -24,6 +24,15 @@ if __name__ == '__main__':
         self.assertEqual(spacecraft.direction, 'Up')
         spacecraft.turn('d')
         self.assertEqual(spacecraft.direction, 'N')
+    def main():
+    spacecraft = Spacecraft((0, 0, 0), 'N')
+    commands = ['f', 'r', 'u', 'b', 'l']
+    spacecraft.execute_commands(commands)
+    final_position = spacecraft.position
+    final_direction = spacecraft.direction
+    print(f"Final Position: {final_position}")
+    print(f"Final Direction: {final_direction}")
+
 
 if __name__ == '__main__':
     unittest.main()
