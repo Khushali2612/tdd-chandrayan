@@ -40,6 +40,12 @@ class chand:
             self.direction = directions[(current_index + 1) % len(directions)]
         elif command == 'l':
             self.direction = directions[(current_index - 1) % len(directions)]
+    def execute_commands(self, commands):
+        for command in commands:
+            if command in ["f", "b"]:
+                self.move(command)
+            elif command in ["r", "l"]:
+                self.turn(command)
         
     
 
