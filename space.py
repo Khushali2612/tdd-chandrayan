@@ -18,8 +18,7 @@ class chand:
             elif self.direction == 'Down':
                 self.position = (x, y, z - 1)
         elif command == 'b':
-            # Similar logic as 'f', but reversing the direction.
-            x, y, z = self.position
+          x, y, z = self.position
             if self.direction == 'N':
                 self.position = (x, y - 1, z)
             elif self.direction == 'S':
@@ -32,7 +31,7 @@ class chand:
                 self.position = (x, y, z - 1)
             elif self.direction == 'Down':
                 self.position = (x, y, z + 1)
-            # spacecraft.py
+           
 
     def turn(self, command):
         directions = ['N', 'E', 'S', 'W', 'Up', 'Down']
