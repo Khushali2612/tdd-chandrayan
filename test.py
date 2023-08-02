@@ -14,6 +14,19 @@ class SpacecraftTest(unittest.TestCase):
         self.assertEqual(spacecraft.position, (0, 1, 0))
         spacecraft.move('b')
         self.assertEqual(spacecraft.position, (0, 0, 0))
+    def test_turn_left_right(self):
+        spacecraft = Spacecraft((0, 0, 0), 'N')
+        spacecraft.turn('r')
+        self.assertEqual(spacecraft.direction, 'E')
+        spacecraft.turn('l')
+        self.assertEqual(spacecraft.direction, 'N')
+     def test_turn_up_down(self):
+        spacecraft = Spacecraft((0, 0, 0), 'N')
+        spacecraft.turn('u')
+        self.assertEqual(spacecraft.direction, 'Up')
+        spacecraft.turn('d')
+        self.assertEqual(spacecraft.direction, 'N')
+
    
 
 if __name__ == '__main__':
